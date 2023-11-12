@@ -1,5 +1,5 @@
 # Create-Cs
-Automatically create C# projects with one command line.
+Automatically create C# projects with one command.
 
 To install module easily:
 
