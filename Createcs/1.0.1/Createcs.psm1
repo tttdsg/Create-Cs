@@ -17,15 +17,18 @@ function New-Cs {
 
  if ($Path -eq ""){
 
-    if ($tp -eq $false) {
+    if ($tp -eq $true) {
 
-        $Path = [string](Read-Host -Prompt "Please enter the desired path: ")
+        $Path = Import-Clixml -Path "$Userpath\Documents\PowerShell\Modules\createcs\MainPath.clixml"
     }
 
     Else {
 
-        $Path = Import-Clixml -Path "$Userpath\Documents\PowerShell\Modules\createcs\MainPath.clixml"
-    }
+        While ($Path -eq ""){
+        $Path = [string](Read-Host -Prompt "Please enter the desired path: ")
+      }
+      
+   }
 
  }
  
