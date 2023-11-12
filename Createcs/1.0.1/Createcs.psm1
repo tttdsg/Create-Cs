@@ -15,8 +15,6 @@ function New-Cs {
 
     $tp = Test-Path -Path "$Userpath\Documents\PowerShell\Modules\createcs\MainPath.clixml"
 
-
-
  if ($Path -eq ""){
 
     if ($tp -eq $false) {
@@ -26,8 +24,7 @@ function New-Cs {
 
     Else {
 
-        $mp = Import-Clixml -Path "$Userpath\Documents\PowerShell\Modules\createcs\MainPath.clixml"
-        $Path = $mp
+        $Path = Import-Clixml -Path "$Userpath\Documents\PowerShell\Modules\createcs\MainPath.clixml"
     }
 
  }
